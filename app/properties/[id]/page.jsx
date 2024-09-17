@@ -1,6 +1,6 @@
-const PropertyDetailPage = () => {
+const PropertyDetailPage = ( { params }) => {
   return ( 
-    <div>PropertyDetailPage</div>
+    <div>PropertyDetailPage {params.id}</div>
    );
 }
  
