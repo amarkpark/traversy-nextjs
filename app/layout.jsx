@@ -1,3 +1,4 @@
+import Navbar from "@/components/navbar";
 import "@/assets/styles/globals.css";
 
 export const metadata = {
@@ -9,6 +10,7 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return ( <html>
     <body>
+      <Navbar />
       <main>{children}</main>
     </body>
   </html> );
