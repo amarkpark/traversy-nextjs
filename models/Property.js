@@ -64,4 +64,6 @@ const propertySchema = new Schema({
   timestamps: true
 });
 
+const Property = models.Property || model("Property", propertySchema);
+
 export default Property;
