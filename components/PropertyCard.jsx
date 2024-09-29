@@ -12,12 +12,12 @@ const PropertyCard = ({property}) => {
   const getRateDisplay = () => {
     const { rates } = property;
 
-    if  ( rates.monthly ) {
+    if ( rates.nightly ) {
+      return `$${rates.nightly.toLocaleString()}/night`;
+    }else if  ( rates.monthly ) {
       return `$${rates.monthly.toLocaleString()}/mo`;
     } else if ( rates.weekly ) {
       return `$${rates.weekly.toLocaleString()}/wk`;
-    } else if ( rates.nightly ) {
-      return `$${rates.nightly.toLocaleString()}/night`;
     }
   }
   return (
@@ -78,14 +78,14 @@ const PropertyCard = ({property}) => {
         <div
           className="flex justify-center gap-4 text-green-900 text-sm mb-4"
         >
+          {property.rates.nightly && (
+            <p><FaMoneyBill className="md:hidden lg:inline" /> Nightly</p>
+          )}
           {property.rates.weekly && (
             <p><FaMoneyBill className="md:hidden lg:inline" /> Weekly</p>
           )}
           {property.rates.monthly && (
             <p><FaMoneyBill className="md:hidden lg:inline" /> Monthly</p>
-          )}
-          {property.rates.nightly && (
-            <p><FaMoneyBill className="md:hidden lg:inline" /> Nightly</p>
           )}
         </div>
 

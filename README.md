@@ -2,6 +2,7 @@ Project is part of ongoing learning in Brad Traversy's (https://www.udemy.com/co
 
 ### *ToDo:* (my own additions)
 
+- Update PropertyDetails to loop through amenities to create list items to DRY the code
 
 Everything else is canned create-next-app content.
 
