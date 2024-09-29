@@ -2,7 +2,10 @@ Project is part of ongoing learning in Brad Traversy's (https://www.udemy.com/co
 
 ### *ToDo:* (my own additions)
 
-- Update PropertyDetails to loop through amenities to create list items to DRY the code
+
+### Completed resolved or deprioritized *ToDo's*
+
+- ~~Update PropertyDetails to loop through amenities to create list items to DRY the code~~ Completed as part of Lesson 26
 
 Everything else is canned create-next-app content.
 
