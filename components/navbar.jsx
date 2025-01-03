@@ -138,6 +138,7 @@ const Navbar = () => {
               <Link href="messages" className="relative group">
                 <button
                   type="button"
+                  name="notifications"
                   className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="absolute -inset-1.5"></span>
@@ -169,8 +170,8 @@ const Navbar = () => {
                 <div>
                   <button
                     type="button"
-                    className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                    id="user-menu-button"
+                    className="relative flex rounded-full -mt-0.5 bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    id="user-menu"
                     aria-expanded="false"
                     aria-haspopup="true"
                     onClick={() => setIsProfileMenuOpen((prev) => !prev)}
@@ -182,6 +183,7 @@ const Navbar = () => {
                       src={profileImage || profileDefault}
                       width={40}
                       height={40}
+                      margin-top={-4}
                       alt="profile image"
                     />
                   </button>
@@ -190,7 +192,7 @@ const Navbar = () => {
                 {/* <!-- Profile dropdown --> */}
                 {isProfileMenuOpen && (
                   <div
-                    id="user-menu"
+                    id="user-menu-open"
                     className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                     role="menu"
                     aria-orientation="vertical"
